@@ -1,7 +1,7 @@
 # debezium latency test
 
 ```
-Mysql > Debezium > Kafka
+Producer > Mysql > Debezium > Kafka < Consumer
 ```
 
 ## Usage
