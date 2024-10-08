@@ -30,12 +30,12 @@ func main() {
 	defer cancel()
 
 	// Set up configuration
-	config := sarama.NewConfig()
-	config.Consumer.Return.Errors = true
+	saramaConfig := sarama.NewConfig()
+	saramaConfig.Consumer.Return.Errors = true
 
 	// Connect to Kafka broker
 	brokers := []string{"kafka:9092"}
-	consumer, err := sarama.NewConsumer(brokers, config)
+	consumer, err := sarama.NewConsumer(brokers, saramaConfig)
 	if err != nil {
 		klog.Fatalf("Failed to start consumer:", err)
 	}

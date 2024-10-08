@@ -47,12 +47,15 @@ func insertCustomer(db *sql.DB, firstName, lastName, email string) error {
 	if err != nil {
 		return fmt.Errorf("failed to insert customer: %v", err)
 	}
-	klog.Infof("inserted: %s %s", firstName, lastName)
+	klog.Infof("inserted: %s", email)
 	return nil
 }
 
 func main() {
-	klog.Infof("starting producer")
+	klog.Infof("starting producer...")
+	time.Sleep(time.Second * 5)
+
+	klog.Infof("started producer")
 
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
