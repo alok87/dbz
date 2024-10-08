@@ -8,6 +8,7 @@
         "database.user": "debezium",
         "database.password": "dbz",
         "database.server.id": "184054",
+        "poll.interval.ms": 8,
         "topic.prefix": "dbserver1",
         "database.include.list": "inventory",
         "schema.history.internal.kafka.bootstrap.servers": "kafka:9092",
