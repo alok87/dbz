@@ -26,6 +26,22 @@ Kafka, zookeeper, debezium, mysql, producer and consumer starts using docker-com
 
 ## Appendix
 
+- Logs of producer
+```
+docker-compose logs -f producer
+```
+
+- Logs of consumer
+```
+docker-compose logs -f consumer
+```
+
+- May need to restart producer and consumer
+```
+docker-compose restart producer
+docker-compose restart consumer
+```
+
 - Login to SQL
 ```
 docker-compose -f docker-compose-mysql.yaml exec mysql bash -c 'mysql -u $MYSQL_USER -p$MYSQL_PASSWORD inventory'
